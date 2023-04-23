@@ -1,7 +1,7 @@
 document.getElementById("bottom").addEventListener("click", function () { 
     event.preventDefault(); 
         let input = document.getElementById("number").value 
-        const specialNumbers = {  
+        const numbers = {  
           1: "one",  
           2: "two",  
           3: "three",  
@@ -31,16 +31,16 @@ document.getElementById("bottom").addEventListener("click", function () {
           90: "ninety",  
         };  
         if (input < 10) {  
-          return console.log(specialNumbers[input]);  
+          return console.log(numbers[input]);  
         }  
         if (input >= 10 && input < 20) {  
-          return console.log(specialNumbers[input]);  
+          return console.log(numbers[input]);  
         }  
       const onesDigit = input % 10;  
           if (onesDigit === 0) {  
-            return console.log( specialNumbers[input[0]+"0"]);  
+            return console.log( numbers[input[0]+"0"]);  
               
           } else {  
-              return console.log(`${specialNumbers[input[0]+"0"]} ${specialNumbers[input[1]]}`)  
+              return console.log(`${numbers[input[0]+"0"]} ${numbers[input[1]]}`)  
           }  
       })
